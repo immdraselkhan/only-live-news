@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>Only Live News | FAQs</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-zinc-100 max-w-7xl mx-auto">
+    <!-- header -->
+    <header class="mx-3">
+        <nav class="sm:flex sm:items-center sm:justify-between py-5 border-b border-neutral-200">
+            <div class="flex items-center justify-between">
+                <!-- logo -->
+                <a href="index.html" class="text-xl text-blue-600 font-extrabold">Only<span class="text-white bg-blue-600 hover:bg-blue-700 mx-2 px-3 py-2 rounded-lg">Live</span>News</a>
+                <!-- hamburger icon -->
+                <div class="sm:hidden">
+                    <button type="button" class="hs-collapse-toggle p-2 rounded-md border font-medium bg-white text-zinc-700 shadow hover:bg-zinc-50" data-hs-collapse="#navbar-collapse-with-animation">
+                        <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd"d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" /></svg>
+                    </button>
+                </div>
+            </div>
+            <!-- menu items -->
+            <div id="navbar-collapse-with-animation" class="sm:flex items-center gap-8 hs-collapse hidden transition-all duration-300 sm:block">
+                <ul class="flex flex-col gap-5 sm:gap-8 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
+                    <li class="text-md lg:text-lg font-bold text-zinc-600 hover:text-blue-600"><a href="index.html">News</a></li>
+                    <li class="text-md lg:text-lg font-bold text-blue-600"><a href="faqs.html">FAQs</a></li>
+                </ul>
+                <!-- profile image -->
+                <div class="hidden sm:block">
+                    <img class="h-10" src="images/user.png" alt="User Image">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- main -->
+    <main class="mx-3">
+        <!-- faqs -->
+        <div>
+            <h2 class="my-8 text-2xl lg:text-4xl text-center tracking-tight font-extrabold text-zinc-900">Frequently Asked Questions</h2>
+        </div>
+        <div class="p-8 text-left md:gap-16 bg-white rounded-lg shadow">
+            <div>
+                <div class="mb-10">
+                    <h3 class="flex items-center mb-4 text-lg font-bold text-zinc-900 hover:text-blue-600 cursor-pointer"><svg class="flex-shrink-0 mr-2 w-5 h-5 text-zinc-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Var, Let, and Const - What's the Difference?</h3>
+                    <p class="text-zinc-500 ">Var declarations are globally scoped or function scoped while let and const are block scoped. Var variables can be updated and re-declared within its scope; let variables can be updated but not re-declared; const variables can neither be updated nor re-declared. They are all hoisted to the top of their scope. But while var variables are initialized with undefined, let and const variables are not initialized. While var and let can be declared without being initialized, const must be initialized during declaration.</p>
+                </div>
+                <div class="mb-10">
+                    <h3 class="flex items-center mb-4 text-lg font-bold text-zinc-900 hover:text-blue-600 cursor-pointer"><svg class="flex-shrink-0 mr-2 w-5 h-5 text-zinc-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>.forEach(), .map(), .filter() - What's the Difference?</h3>
+                    <p class="text-zinc-500 "><strong>.forEach()</strong> - .forEach(), is used to execute the same code on every element in an array but does not change the array and it returns undefined.</p>
+                    <p class="text-zinc-500 "><strong>.map()</strong> - .map() executes the same code on every element in an array and returns a new array with the updated elements.</p>
+                    <p class="text-zinc-500 "><strong>.filter()</strong> - .filter() checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria.</p>
+                    <p class="text-zinc-500 "><strong>.find()</strong> - .find() When you want to select a single element from an array.</p>
+                </div>
+                <div>
+                    <h3 class="flex items-center mb-4 text-lg font-bold text-zinc-900 hover:text-blue-600 cursor-pointer"><svg class="flex-shrink-0 mr-2 w-5 h-5 text-zinc-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg>Why we use template string?</h3>
+                    <p class="text-zinc-500">Template strings are a powerful feature of modern JavaScript released in ES6. It lets us insert/interpolate variables and expressions into strings without needing to concatenate like in older versions of JavaScript. It allows us to create strings that are complex and contain dynamic elements. Template string are literals delimited with backtick (`) characters, allowing for multi-line strings, for string interpolation with embedded expressions, and for special constructs called tagged templates.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="mx-3 mt-10 mb-5 shadow">
+        <div class="p-5 text-center bg-white font-bold rounded-lg">
+            <p>© 2022 - <a class="hover:text-blue-600" href="index.html">OnlyLiveNews</a></p>
+        </div>
+    </footer>
+    <!-- api script -->
+    <script src="js/api.js"></script>
+    <!-- PrelineUI -->
+    <script src="https://res.cloudinary.com/hostracer/raw/upload/v1662719484/dev/files/hs-ui.bundle.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Mulish', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>Only Live News | News</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-zinc-100 max-w-7xl mx-auto">
+    <!-- header -->
+    <header class="mx-3">
+        <nav class="sm:flex sm:items-center sm:justify-between py-5 border-b border-neutral-200">
+            <div class="flex items-center justify-between">
+                <!-- logo -->
+                <a href="index.html" class="text-xl text-blue-600 font-extrabold">Only<span class="text-white bg-blue-600 hover:bg-blue-700 mx-2 px-3 py-2 rounded-lg">Live</span>News</a>
+                <!-- hamburger icon -->
+                <div class="sm:hidden">
+                    <button type="button" class="hs-collapse-toggle p-2 rounded-md border font-medium bg-white text-zinc-700 shadow hover:bg-zinc-50" data-hs-collapse="#navbar-collapse-with-animation">
+                        <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd"d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" /></svg>
+                    </button>
+                </div>
+            </div>
+            <!-- menu items -->
+            <div id="navbar-collapse-with-animation" class="sm:flex items-center gap-8 hs-collapse hidden transition-all duration-300 sm:block">
+                <ul class="flex flex-col gap-5 sm:gap-8 mt-5 sm:flex-row sm:items-center sm:justify-end sm:mt-0 sm:pl-5">
+                    <li class="text-md lg:text-lg font-bold text-blue-600"><a href="index.html">News</a></li>
+                    <li class="text-md lg:text-lg font-bold text-zinc-600 hover:text-blue-600"><a href="faqs.html">FAQs</a></li>
+                </ul>
+                <!-- profile image -->
+                <div class="hidden sm:block">
+                    <img class="h-10" src="images/user.png" alt="User Image">
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- modal -->
+    <div id="hs-basic-modal" class="flex items-center justify-center top-0 bottom-0 left-0 fixed w-full z-[60] hs-modal hidden">
+    </div>
+    <!-- main -->
+    <main class="mx-3">
+        <!-- categories -->
+        <div class="py-7">
+            <nav class="lg:flex lg:items-center lg:justify-between">
+                <!-- categories hamburger icon -->
+                <div class="lg:hidden">
+                    <button type="button" class="flex items-center justify-center gap-3 hs-collapse-toggle p-2 rounded-md border font-medium bg-white text-zinc-700 shadow hover:bg-zinc-50 w-full" data-hs-collapse="#categories-collapse-with-animation">
+                        <svg class="hs-collapse-open:hidden w-4 h-4" width="16" height="16" fill="currentColor" viewBox="0 0 16 16"><path fill-rule="evenodd"d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" /></svg>Categories
+                    </button>
+                </div>
+                <!-- category items -->
+                <div id="categories-collapse-with-animation" class="hidden transition-all duration-300 lg:block w-full">
+                    <ul id="categories-menu" class="flex flex-col text-center first:mt-5 lg:first:mt-0 gap-3 lg:flex-row justify-between">
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- spinner -->
+        <div id="spinner" class="animate-spin w-10 h-10 border-[3px] border-current border-t-transparent text-blue-600 rounded-full mx-auto mt-2 mb-4 hidden" role="status" aria-label="loading">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <!-- filter result -->
+        <div class="hidden">
+            <h2 id="result" class="p-4 font-bold bg-white rounded-lg shadow-md"></h2>
+        </div>
+        <!-- sort by -->
+        <div class="block sm:flex justify-between py-5 space-y-4 sm:space-y-0">
+            <div class="flex items-center justify-center gap-4">
+                <h3>Sort By</h3>
+                <button class="flex items-center gap-3 px-3 py-1.5 bg-white rounded opacity-70">Views <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" /></svg></button>
+            </div>
+            <div class="flex items-center justify-center gap-4">
+                <button class="text-white px-3 py-1.5 bg-blue-600 hover:bg-blue-700 rounded">Today's Pick</button>
+                <button class="text-blue-600 px-3 py-1.5 border border-blue-600 rounded">Trending</button>
+            </div>
+        </div>
+        <!-- news feed -->
+        <div id="news-feed" class="grid grid-cols-1 gap-5">
+
+        </div>
+    </main>
+    <!-- footer -->
+    <footer class="mx-3 mt-10 mb-5 shadow">
+        <div class="p-5 text-center bg-white font-bold rounded-lg">
+            <p>© 2022 - <a class="hover:text-blue-600" href="index.html">OnlyLiveNews</a></p>
+        </div>
+    </footer>
+    <!-- api script -->
+    <script src="js/api.js"></script>
+    <!-- PrelineUI -->
+    <script src="js/hs-ui.bundle.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Mulish', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
