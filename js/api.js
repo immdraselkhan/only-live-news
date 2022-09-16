@@ -57,7 +57,7 @@ const getCategory = category => {
         const newNews = `
             <div class="flex flex-col items-center bg-white p-4 rounded-lg border shadow-md md:flex-row gap-4">
             <img class="object-cover w-full h-48 rounded-lg md:h-auto md:w-48" src="${news.thumbnail_url}" alt="">
-                <div class="flex flex-col justify-between p-0 md:p-4 gap-5">
+                <div class="flex flex-col justify-between p-0 md:p-4 gap-5 w-full">
                     <div>
                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">${news.title}</h5>
                         <p class="mb-3 font-normal text-gray-700">${news.details.length < 300 ? news.details : news.details.slice(0, 300)}...</p>
